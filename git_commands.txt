@@ -1,0 +1,144 @@
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ pwd
+/c/Users/ranje/Desktop/git_course
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ git clone https://github.com/ranjeetk93/git_course.git
+Cloning into 'git_course'...
+warning: You appear to have cloned an empty repository.
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ pwd
+/c/Users/ranje/Desktop/git_course
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ ls
+git_course/
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course
+$ cd git_course/
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git add git.txt
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git.txt
+
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git commit -m "git file"
+[main (root-commit) 19da633] git file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.txt
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ranjeetk93/git_course.git
+ * [new branch]      main -> main
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 926 bytes | 115.00 KiB/s, done.
+From https://github.com/ranjeetk93/git_course
+ * branch            main       -> FETCH_HEAD
+   19da633..1ece222  main       -> origin/main
+Updating 19da633..1ece222
+Fast-forward
+ git.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (main)
+$ git checkout -b ranjeet_git
+Switched to a new branch 'ranjeet_git'
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ git status
+On branch ranjeet_git
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ git add .
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ git commit -m "git thirls line"
+[ranjeet_git e26c505] git thirls line
+ 1 file changed, 1 insertion(+)
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ git push
+fatal: The current branch ranjeet_git has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ranjeet_git
+
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ ^C
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
+$ git push --set-upstream origin ranjeet_git
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ranjeet_git' on GitHub by visiting:
+remote:      https://github.com/ranjeetk93/git_course/pull/new/ranjeet_git
+remote:
+To https://github.com/ranjeetk93/git_course.git
+ * [new branch]      ranjeet_git -> ranjeet_git
+branch 'ranjeet_git' set up to track 'origin/ranjeet_git'.
+
+ranje@Ranjeet-PC MINGW64 ~/Desktop/git_course/git_course (ranjeet_git)
